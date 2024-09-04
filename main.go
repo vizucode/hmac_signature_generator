@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
@@ -161,5 +162,5 @@ func main() {
 		})
 	})
 
-	app.Listen(":2000")
+	app.Listen(os.Getenv("APP_HOST"))
 }

@@ -1,0 +1,10 @@
+
+services:
+  app:
+    build:
+      context: .  # Direktori konteks build (biasanya adalah direktori tempat Dockerfile berada)
+      dockerfile: Dockerfile  # Nama Dockerfile jika berbeda dari default
+    ports:
+      - "8888:8888"  # Pemetaan port antara kontainer dan host
+    environment:
+      - APP_HOST=:8888
